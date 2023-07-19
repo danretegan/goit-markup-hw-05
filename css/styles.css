@@ -26,6 +26,7 @@ ul {
   list-style-type: none;
 }
 
+
 /* Container general */
 .container {
   margin: 0 auto;
@@ -37,6 +38,7 @@ ul {
   max-width: 1170px;
   padding: 94px 0 94px 0;
 }
+
 
 /* Header Section */
 .header {
@@ -120,6 +122,7 @@ ul {
   color: var(--webstudio-color);
 }
 
+
 /* Hero Section*/
 .hero {
   align-items: center;
@@ -163,6 +166,7 @@ ul {
   color: var(--webstudio-color);
 }
 
+
 /* ATTENTION TO DETAILS advertising Section*/
 
 .big-icons-list {
@@ -170,6 +174,7 @@ ul {
   display: flex;
   justify-content: center;
   gap: 30px;
+  padding-left: 0;
 }
 
 .big-icon-area {
@@ -281,7 +286,7 @@ ul {
   display: flex;
   gap: 10px;
   justify-content: center;
-  padding-bottom: 30px;
+  padding: 0 0 30px 0;
 }
 
 .icon {
@@ -300,6 +305,7 @@ ul {
   background-color: var(--webstudio-color);
   color: var(--social-links-background-color);
 }
+
 
 /* Regular Customers */
 .regular-customers-icon-area {
@@ -320,10 +326,12 @@ ul {
   gap: 30px;
 }
 
-.regular-customers-icon:hover,
-.regular-customers-icon:focus {
+.regular-customers-icon-area:hover,
+.regular-customers-icon-area:focus {
   color: var(--webstudio-color);
+  border-color: var(--webstudio-color);
 }
+
 
 /* Footer Section */
 .footer {
@@ -385,6 +393,7 @@ ul {
 
 .footer-icons-list {
   display: flex;
+  padding: 0;
 }
 
 .icon-footer {
@@ -407,6 +416,7 @@ ul {
 .icon-footer:focus {
   background-color: var(--webstudio-color);
 }
+
 
 /* Portfolio Page*/
 
@@ -484,9 +494,4 @@ ul {
     0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 
-.item-active :hover {
-  border: 1px solid #eee;
-  background: #fff;
-  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
-}
+
