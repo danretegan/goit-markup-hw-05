@@ -82,7 +82,11 @@
 
         <!-- Request our service button -->
 
-        <button type="button" class="request-our-service-button">
+        <button
+          data-modal-open
+          type="button"
+          class="request-our-service-button"
+        >
           Request our service
         </button>
       </section>
@@ -566,8 +570,17 @@
           </div>
         </div>
       </footer>
+
+      <!-- Modal Section -->
+
+      <div class="modal is-hidden" data-modal>
+        <div class="modal-content">
+          <button class="close-btn" data-modal-close>&times</button>
+          Continutul modalului
+        </div>
+      </div>
     </main>
     <!-- Plasăm înainte de tag-ul de închidere body  -->
-  <script src="./js/modal.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
