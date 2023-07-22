@@ -10,6 +10,7 @@
   --icon-footer-color: #fff;
   --icon-footer-background-color: #ffffff1a;
   --webstudio-font-family: Roboto, Arial, sans-serif;
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 * {
@@ -24,6 +25,10 @@ body {
 
 ul {
   list-style-type: none;
+}
+
+a {
+  transition: color var(--transition);
 }
 
 /* Container general */
@@ -45,6 +50,7 @@ ul {
   background-color: #fff;
   border-bottom: 1px solid #ececec;
   margin: 0 auto;
+  position: relative;
 }
 
 .header-text {
@@ -53,6 +59,16 @@ ul {
   justify-content: space-between;
   max-width: 1170px;
   margin: 0 auto;
+}
+
+.logo span {
+color: var(--webstudio-color);
+font-family: Raleway;
+font-size: 26px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 0.78px;
 }
 
 .logo {
@@ -68,10 +84,27 @@ ul {
   text-decoration-line: none;
 }
 
-.logo-active:hover,
-.logo-active:focus {
+.active-page {
+  display: inline-block;
+  position: relative;
+}
+
+.active-page::after {
+  content: "";
+  position: absolute;
+  bottom: -23px; /* Distanta fata de text (4px sub titlu) */
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--webstudio-color);
+}
+
+
+
+.active:hover,
+.active:focus {
   color: var(--webstudio-color);
-  margin: 0;
 }
 
 .navigation {
@@ -83,7 +116,10 @@ ul {
   display: flex;
   gap: 50px;
   margin-left: 93px;
+  position: relative;
 }
+
+
 
 .navigation-link {
   color: var(--title-nav-color);
@@ -93,11 +129,6 @@ ul {
   line-height: 1.14;
   text-align: left;
   text-decoration-line: none;
-}
-
-.navigation-link-active:hover,
-.navigation-link-active:focus {
-  color: var(--webstudio-color);
 }
 
 .contacts {
@@ -113,21 +144,18 @@ ul {
   line-height: 1.14;
   text-align: left;
   text-decoration-line: none;
+  transition: var(--transition);
 }
 
-.email:hover,
-.phone:hover,
-.email:focus,
-.phone:focus {
-  color: var(--webstudio-color);
-}
+
 
 /* Hero Section*/
 
 .hero {
   align-items: center;
-  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url("../images/Hero_img.jpg");
+  background: linear-gradient(rgba(47, 48, 58, 0.4), 
+  rgba(47, 48, 58, 0.4)), 
+  url("../images/Hero_img.jpg");
   display: flex;
   flex-direction: column;
   height: 600px;
@@ -159,6 +187,7 @@ ul {
   line-height: 1.875;
   text-align: center;
   width: 200px;
+  transition: background-color var(--transition);
 }
 
 .request-our-service-button:hover,
@@ -234,12 +263,36 @@ ul {
   text-align: center;
 }
 
-.what-we-do-photo {
-  align-items: center;
+.what-we-do-photos {
   display: flex;
-  flex-wrap: nowrap;
   gap: 30px;
   justify-content: center;
+}
+
+.what-we-do-item {
+  position: relative;
+}
+
+.overlay-text {
+  align-items: center;
+  background: rgba(47, 48, 58, 0.80);
+  bottom: 5px;
+  color: #fff;
+  display: flex;
+  font-family: var(--webstudio-font-family);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  height: 70px;
+  justify-content: center;
+  left: 0;
+  letter-spacing: 0.42px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  
 }
 
 /* Our Team Section*/
@@ -262,7 +315,8 @@ ul {
   border-radius: 0px 0px 4px 4px;
   /* material shadow v1 */
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
 .name {
@@ -299,6 +353,7 @@ ul {
   height: 44px;
   justify-content: center;
   width: 44px;
+  transition: background-color var(--transition);
 }
 
 .icon:hover,
@@ -308,6 +363,12 @@ ul {
 }
 
 /* Regular Customers */
+
+.regular-customers-icons-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
 
 .regular-customers-icon-area {
   align-items: center;
@@ -319,12 +380,7 @@ ul {
   height: 92px;
   justify-content: center;
   width: 170px;
-}
-
-.regular-customers-icons-list {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+  transition: var(--transition);
 }
 
 .regular-customers-icon-area:hover,
@@ -348,14 +404,32 @@ ul {
   padding: 60px 0 60px 0;
 }
 
-.footer-logo {
-  margin: 0 0 28px 0;
-  padding: 0;
-}
+.logo-footer span {
+  color: var(--webstudio-color);
+  font-family: Raleway;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.78px;
+  }
+  
+  .logo-footer {
+    color: #fff;
+    font-family: Raleway;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    line-height: 1.19;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    text-decoration-line: none;
+  }
 
 .address {
   color: #fff;
-  font-family: Roboto;
+  font-family: var(--webstudio-font-family);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -371,7 +445,7 @@ ul {
 
 .contact-footer {
   color: #ffffff99;
-  font-family: Roboto;
+  font-family: var(--webstudio-font-family);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -382,7 +456,7 @@ ul {
 
 .find-us-on-text {
   color: #fff;
-  font-family: Roboto;
+  font-family: var(--webstudio-font-family);
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -411,6 +485,7 @@ ul {
   display: flex;
   height: 44px;
   width: 44px;
+  transition: background-color var(--transition);
 }
 
 .icon-footer:hover,
@@ -430,9 +505,10 @@ ul {
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0.48px;
+  /* letter-spacing: 0.03em; */
   line-height: 1.625;
   text-align: center;
-  /* letter-spacing: 0.03em; */
+  transition: background-color var(--transition);
 }
 
 .filter-button-set .filter-button:hover,
@@ -443,7 +519,8 @@ ul {
   border-radius: 4px;
   /* shadow-middle */
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
-    0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+    0px 1px 2px 0px rgba(0, 0, 0, 0.08), 
+    0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .filter-button-set {
@@ -483,21 +560,57 @@ ul {
   padding: 0;
 }
 
+.box-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.box-overlay:hover .overlay {
+  transform: translateY(0);  
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--webstudio-color);
+  opacity: 0.9;
+  transition: var(--transition);
+  transform: translateY(100%);
+}
+
+.overlay p {
+  color: #fff;
+  font-family: var(--webstudio-font-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 155.556% */
+  letter-spacing: 0.54px;
+  padding: 63px 24px 91px 24px;
+
+}
+
 .portfolio-card {
   background: #fff;
   border: 1px solid #eee;
+  transition: var(--transition);
 }
 
 .portfolio-card:hover,
 .portfolio-card:focus {
   box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+    0px 4px 4px 0px rgba(0, 0, 0, 0.06), 
+    0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 
 /* Modal Section */
 
 .modal {
   align-items: center;
+  background: rgba(0, 0, 0, 0.20);
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -505,39 +618,48 @@ ul {
   position: fixed;
   top: 0;
   width: 100vw;
+  transition: transform var(--transition);
+  /* pointer-events: auto;
+  opacity: 0.5; */
 
 }
 
 .modal-content {
-  background-color: #f5f4fa;
-  height: 500px;
+  background-color: #fff;
+  height: 581px;
   margin: 0 auto;
   padding: 16px;
   position: relative;
-  width: 35%;
+  width: 528px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 
+  0px 1px 1px 0px rgba(0, 0, 0, 0.14), 
+  0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
 }
 
 .is-hidden {
   visibility: hidden;
-
+  transform: scale(1.05);
 }
 
 .close-btn {
-  background-color: red;
-  border: 1px solid black;
-  color: white;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  color: #000;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
   cursor: pointer;
   outline: none;
   position: absolute;
   right: 16px;
   top: 16px;
-
+  transition: background-color var(--transition);
 }
 
 .close-btn:hover,
 .close-btn:focus {
-  background-color: #fff;
-  color: red;
-
-}
+  background-color: var(--webstudio-color);
+  color: #fff;
+ }
