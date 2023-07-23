@@ -668,25 +668,16 @@ a {
   transform: scale(1.05);
 }
 
-.close-btn {
-  background-color: #fff;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+.icon-close {
   color: #000;
-  cursor: pointer;
-  height: 30px;
-  outline: none;
   position: absolute;
-  right: 16px;
-  top: 16px;
-  transition: color var(--transition),
-              background-color var(--transition);
-  width: 30px;
+  right: 8px;
+  top: 8px;
+  transition: color var(--transition);
 }
 
-.close-btn:hover,
-.close-btn:focus {
-  color: var(--webstudio-color);
-  transition: color var(--transition),
-              background-color var(--transition);
+.icon-close:hover,
+.icon-close:focus {
+  color: #2196f3;
+  transition: color var(--transition);
 }
