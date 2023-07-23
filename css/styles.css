@@ -96,14 +96,14 @@ a {
 }
 
 .active-page::after {
-  content: "";
-  position: absolute;
-  bottom: -23px; /* Distanta fata de text (4px sub titlu) */
-  left: 0;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
   background-color: var(--webstudio-color);
+  border-radius: 2px;
+  bottom: -23px;
+  content: "";
+  height: 4px;
+  left: 0;
+  position: absolute;
+  width: 100%;
 }
 
 .active:hover,
@@ -152,8 +152,9 @@ a {
 
 .hero {
   align-items: center;
-  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url("../images/Hero_img.jpg");
+  background: linear-gradient(rgba(47, 48, 58, 0.4), 
+                              rgba(47, 48, 58, 0.4)),
+                              url("../images/Hero_img.jpg");
   display: flex;
   flex-direction: column;
   height: 600px;
@@ -318,9 +319,9 @@ a {
 .photo-with-caption {
   background-color: #fff;
   border-radius: 0px 0px 4px 4px;
-  /* material shadow v1 */
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+              0px 1px 1px 0px rgba(0, 0, 0, 0.14), 
+              0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
 .name {
@@ -357,8 +358,8 @@ a {
   height: 44px;
   justify-content: center;
   width: 44px;
-  transition: color var(--transition),
-              background-color var(--transition);
+  transition: color var(--transition);
+  transition: background-color var(--transition);
 }
 
 
@@ -366,8 +367,8 @@ a {
 .icon:focus {
   background-color: var(--webstudio-color);
   color: var(--social-links-background-color);
-  transition: color var(--transition),
-              background-color var(--transition);
+  transition: color var(--transition);
+  transition: background-color var(--transition);
 }
 
 /* Regular Customers */
@@ -524,7 +525,6 @@ a {
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0.48px;
-  /* letter-spacing: 0.03em; */
   line-height: 1.625;
   text-align: center;
   transition: color var(--transition),
@@ -538,7 +538,6 @@ a {
   color: #fff;
   cursor: pointer;
   border-radius: 4px;
-  /* shadow-middle */
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
               0px 1px 2px 0px rgba(0, 0, 0, 0.08), 
               0px 3px 1px 0px rgba(0, 0, 0, 0.1);
@@ -588,8 +587,8 @@ a {
 }
 
 .box-overlay {
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
 
 .box-overlay:hover .overlay {
@@ -599,15 +598,15 @@ a {
 }
 
 .overlay {
+  background-color: var(--webstudio-color);
+  height: 100%;
+  left: 0;
+  opacity: 0.9;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--webstudio-color);
-  opacity: 0.9;
-  transition: transform var(--transition);
   transform: translateY(100%);
+  transition: transform var(--transition);
+  width: 100%;
 }
 
 .overlay p {
@@ -616,8 +615,8 @@ a {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 28px; /* 155.556% */
   letter-spacing: 0.54px;
+  line-height: 28px;
   padding: 63px 24px 91px 24px;
 }
 
@@ -632,7 +631,7 @@ a {
   box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
               0px 4px 4px 0px rgba(0, 0, 0, 0.06), 
               0px 1px 1px 0px rgba(0, 0, 0, 0.12);
-transition: box-shadow var(--transition);            
+  transition: box-shadow var(--transition);            
 }
 
 /* Modal Section */
@@ -646,24 +645,22 @@ transition: box-shadow var(--transition);
   left: 0;
   position: fixed;
   top: 0;
-  width: 100vw;
   transition: transform var(--transition);
-  /* pointer-events: auto;
-  opacity: 0.5; */
+  width: 100vw;
 }
 
 .modal-content {
   background-color: #fff;
-  height: 581px;
-  margin: 0 auto;
-  padding: 16px;
-  position: relative;
-  width: 528px;
   border-radius: 4px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
               0px 1px 1px 0px rgba(0, 0, 0, 0.14), 
               0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  height: 581px;
+  margin: 0 auto;
+  padding: 16px;
+  position: relative;
   transition: box-shadow var(--transition); 
+  width: 528px;
 }
 
 .is-hidden {
@@ -673,24 +670,23 @@ transition: box-shadow var(--transition);
 
 .close-btn {
   background-color: #fff;
+  border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   color: #000;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
   cursor: pointer;
+  height: 30px;
   outline: none;
   position: absolute;
   right: 16px;
   top: 16px;
   transition: color var(--transition),
               background-color var(--transition);
+  width: 30px;
 }
 
 .close-btn:hover,
 .close-btn:focus {
-  background-color: var(--webstudio-color);
-  color: #fff;
+  color: var(--webstudio-color);
   transition: color var(--transition),
               background-color var(--transition);
 }
