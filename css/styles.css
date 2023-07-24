@@ -10,7 +10,6 @@
   --icon-footer-color: #fff;
   --icon-footer-background-color: #ffffff1a;
   --webstudio-font-family: Roboto, Arial, sans-serif;
-  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -28,7 +27,7 @@ ul {
 }
 
 a {
-  transition: color var(--transition);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Container general */
@@ -69,7 +68,7 @@ a {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.78px;
-  transition: color var(--transition);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo {
@@ -85,9 +84,9 @@ a {
   text-decoration-line: none;
 }
 
-.logo:hover span {
+.logo:hover span,
+.logo:focus span {
   color: #000;
-  transition: color var(--transition);
   }
 
 .active-page {
@@ -186,22 +185,16 @@ a {
   line-height: 1.875;
   text-align: center;
   width: 200px;
-  transition: color var(--transition),
-              background-color var(--transition),
-              box-shadow var(--transition);
-
-
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 .request-our-service-button:hover,
 .request-our-service-button:focus {
   background-color: #fff;
   color: var(--webstudio-color);
-  transition: color var(--transition),
-              background-color var(--transition),
-              box-shadow var(--transition);
-}
+  }
 
 /* ATTENTION TO DETAILS advertising Section*/
 
@@ -358,8 +351,8 @@ a {
   height: 44px;
   justify-content: center;
   width: 44px;
-  transition: color var(--transition);
-  transition: background-color var(--transition);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -367,8 +360,6 @@ a {
 .icon:focus {
   background-color: var(--webstudio-color);
   color: var(--social-links-background-color);
-  transition: color var(--transition);
-  transition: background-color var(--transition);
 }
 
 /* Regular Customers */
@@ -389,18 +380,15 @@ a {
   height: 92px;
   justify-content: center;
   width: 170px;
-  transition: color var(--transition),
-              border-color var(--transition);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .regular-customers-icon-area:hover,
 .regular-customers-icon-area:focus {
   color: var(--webstudio-color);
   border-color: var(--webstudio-color);
-  transition: color var(--transition),
-              border-color var(--transition);
-
-}
+ }
 
 /* Footer Section */
 
@@ -425,7 +413,7 @@ a {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.78px;
-  transition: color var(--transition);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-footer {
@@ -443,7 +431,6 @@ a {
 
 .logo-footer:hover span {
   color:#fff;
-  transition: color var(--transition);
 }
 
 .address {
@@ -504,13 +491,12 @@ a {
   display: flex;
   height: 44px;
   width: 44px;
-  transition: background-color var(--transition);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-footer:hover,
 .icon-footer:focus {
   background-color: var(--webstudio-color);
-  transition: background-color var(--transition);
 }
 
 /* Portfolio Page*/
@@ -527,9 +513,9 @@ a {
   letter-spacing: 0.48px;
   line-height: 1.625;
   text-align: center;
-  transition: color var(--transition),
-              background-color var(--transition),
-              box-shadow var(--transition);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-button-set .filter-button:hover,
@@ -541,10 +527,6 @@ a {
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
               0px 1px 2px 0px rgba(0, 0, 0, 0.08), 
               0px 3px 1px 0px rgba(0, 0, 0, 0.1);
-  transition: color var(--transition),
-              background-color var(--transition),
-              box-shadow var(--transition);
-
   }
 
 .filter-button-set {
@@ -593,8 +575,6 @@ a {
 
 .box-overlay:hover .overlay {
   transform: translateY(0);
-  transition: transform var(--transition);
-
 }
 
 .overlay {
@@ -605,7 +585,7 @@ a {
   position: absolute;
   top: 0;
   transform: translateY(100%);
-  transition: transform var(--transition);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
 }
 
@@ -623,7 +603,7 @@ a {
 .portfolio-card {
   background: #fff;
   border: 1px solid #eee;
-  transition: box-shadow var(--transition); 
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .portfolio-card:hover,
@@ -631,7 +611,6 @@ a {
   box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
               0px 4px 4px 0px rgba(0, 0, 0, 0.06), 
               0px 1px 1px 0px rgba(0, 0, 0, 0.12);
-  transition: box-shadow var(--transition);            
 }
 
 /* Modal window Section */
@@ -645,7 +624,7 @@ a {
   left: 0;
   position: fixed;
   top: 0;
-  transition: transform var(--transition);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 100vw;
 }
 
@@ -659,14 +638,14 @@ a {
   margin: 0 auto;
   padding: 16px;
   position: relative;
-  transition: box-shadow var(--transition); 
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
   width: 528px;
 }
 
 .is-hidden {
   visibility: hidden;
   transform: scale(1.05);
-  transition: transform var(--transition);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-close {
@@ -674,11 +653,10 @@ a {
   position: absolute;
   right: 8px;
   top: 8px;
-  transition: color var(--transition);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-close:hover,
 .icon-close:focus {
   color: #2196f3;
-  transition: color var(--transition);
 }
