@@ -634,7 +634,7 @@ a {
   transition: box-shadow var(--transition);            
 }
 
-/* Modal Section */
+/* Modal window Section */
 
 .modal {
   align-items: center;
@@ -666,6 +666,7 @@ a {
 .is-hidden {
   visibility: hidden;
   transform: scale(1.05);
+  transition: transform var(--transition);
 }
 
 .icon-close {
