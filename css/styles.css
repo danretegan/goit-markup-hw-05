@@ -82,6 +82,7 @@ a {
   padding: 0;
   text-align: left;
   text-decoration-line: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo:hover span,
@@ -429,7 +430,8 @@ a {
   text-decoration-line: none;
 }
 
-.logo-footer:hover span {
+.logo-footer:hover span,
+.logo-footer:focus span {
   color:#fff;
 }
 
